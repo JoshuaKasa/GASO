@@ -92,7 +92,12 @@ def draw_menu(stdscr):
         elif k == curses.KEY_ENTER or k in [10, 13]:  # Enter key
             # Placeholder for launching the selected game
             game = games[current_platform][current_selection]
-            # TODO: Launch the game
+            
+            # Launch the game (placeholder)
+            # For future reference, what this will do is chaning the OS path and then running the emulator command
+            # corresponding to the platform and the game (we get this from the EMULATORS_COMMANDS dictionary)
+            print(EMULATORS_COMMANDS[current_platform], game)
+
             break  # Or keep the menu open
         elif k == ord('n'):
             current_platform_index = (current_platform_index + 1) % len(platforms)
