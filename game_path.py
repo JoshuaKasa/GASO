@@ -20,3 +20,9 @@ GAMES_EXTENSION = {
     'NES': NES_GAMES_EXTENSION,
     'Arcade': ARCADE_GAMES_EXTENSION
 }
+
+GAME_COMMANDS = {
+    'PS1': 'duckstation',
+    'NES': 'nestopia',
+    'Arcade': 'mame'
+}
