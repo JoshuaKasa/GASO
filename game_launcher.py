@@ -6,6 +6,15 @@ platforms = list(games.keys())
 current_platform_index = 0
 current_platform = platforms[current_platform_index]
 current_selection = 0
+def run_windows():
+    '''
+    This function will be used to run windows whenever we quit from the launcher,
+    since the arcade (the one I'm building) will not open the 'explorer.exe' we need to run it manually 
+    whenever we quit from the launcher
+    '''
+    if os.system('tasklist | find "explorer.exe"') == 0:
+        return
+    os.system('explorer.exe')
 
 def wrap(min_index, max_index):
     '''
