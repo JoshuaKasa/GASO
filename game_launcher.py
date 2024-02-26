@@ -8,6 +8,20 @@ current_platform = platforms[current_platform_index]
 current_selection = 0
 
 def wrap(min_index, max_index):
+    '''
+    This function will wrap the index of the selected game so it doesn't go out of bounds
+
+    Example:
+    wrap(0, 3)(4) # 0
+    wrap(0, 3)(-1) # 3
+
+    Args:
+    min_index (int): The minimum index of the list
+    max_index (int): The maximum index of the list
+
+    Returns:
+    wrapper (function): The function that will wrap the index
+    '''
     def wrapper(index):
         if index < min_index:
             return max_index
