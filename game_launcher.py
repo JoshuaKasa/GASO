@@ -6,10 +6,6 @@ from game_list import games
 from emulator_command import EMULATORS_COMMANDS
 
 # Initial state
-platforms = list(games.keys())
-current_platform_index = 0
-current_platform = platforms[current_platform_index]
-current_selection = 0
 platforms = list(games.keys()) # The list of platforms
 current_platform_index = 0 # The index of the current platform
 current_platform = platforms[current_platform_index] # This will be the name of the platform we want to emulate
